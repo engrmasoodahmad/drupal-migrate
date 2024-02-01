@@ -26,6 +26,7 @@
         "drupal/core-vendor-hardening": "^10.2",
         "drupal/metatag": "^2.0",
         "drupal/paragraphs": "^1.17",
+        "drupal/recreate_block_content": "^3.0",
         "drupal/smtp": "^1.2",
         "drupal/svg_image": "^3.0",
         "drupal/twig_tweak": "^3.2",
