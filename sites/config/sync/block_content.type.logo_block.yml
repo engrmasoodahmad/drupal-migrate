@@ -1,0 +1,8 @@
+uuid: 7ab8f6c3-e6fc-4d35-9f69-aadf5326c00c
+langcode: en
+status: true
+dependencies: {  }
+id: logo_block
+label: 'Logo block'
+revision: 0
+description: 'This block type will have media and link field for logo.'

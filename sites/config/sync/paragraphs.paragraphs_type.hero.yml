@@ -1,0 +1,10 @@
+uuid: 7b3e14da-64bc-40cd-a9a2-2a1b1ab76bf6
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+icon_uuid: null
+icon_default: null
+description: 'This paragraph type contains hero image, title, body and ctas'
+behavior_plugins: {  }

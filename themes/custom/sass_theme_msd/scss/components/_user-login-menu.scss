@@ -1,0 +1,19 @@
+.account-menu {
+  display: none;
+
+  @include desktop {
+    display: block
+  }
+
+  .user-login-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li a {
+      @extend .button-tertiary;
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+}

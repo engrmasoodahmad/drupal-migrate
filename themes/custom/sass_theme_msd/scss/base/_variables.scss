@@ -1,0 +1,97 @@
+$red-color: #dc101b;
+$black-color: #0f1618;
+$black-text: #333;
+
+$color-primary-1: #009FE4;
+$color-primary-2: #00233D;
+
+$color-secondary-1: #F9F9F9;
+$color-secondary-2: #E5F5FC;
+$color-secondary-3: #000000;
+$color-secondary-4: #797979;
+$color-secondary-5: #FFFFFF;
+
+// BUTTONS
+.button-primary {
+  border-radius: 39px;
+  background-color: $color-primary-1;
+  color: $color-secondary-5;
+  padding: 13px 27px;
+
+  @include tablet {
+    padding: 17px 34px;
+  }
+
+  @include desktop {
+    padding: 22px 48px;
+  }
+
+  @include desktop-large {
+    padding: 25px 58px;
+  }
+
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+  font-family: $font-nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+
+  @include tablet {
+    height: 65px;
+  }
+}
+
+.button-secondary {
+  @extend .button-primary;
+  background-color: $color-primary-2;
+}
+
+.button-tertiary {
+  @extend .button-primary;
+  background-color: $color-secondary-5;
+  color: $color-primary-2;
+}
+
+.button-video {
+  @extend .button-primary;
+  background-color: #f4f4f4;
+  color: $color-primary-2;
+  position: relative;
+  padding-left: 31px;
+  padding-right: 81px;
+
+  @include tablet {
+    padding-left: 31px;
+    padding-right: 81px;
+  }
+
+  @include desktop {
+    padding-left: 31px;
+    padding-right: 81px;
+  }
+
+  &::after {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 59 59" fill="none"><rect x="-0.000976562" y="0.000488281" width="59" height="59" rx="29.5" fill="%2300233D"/><path d="M25.6162 39.0005C25.3476 38.9999 25.0837 38.9124 24.8505 38.7467C24.3254 38.3771 23.999 37.6597 23.999 36.8809V21.1201C23.999 20.3392 24.3254 19.624 24.8505 19.2544C25.0893 19.084 25.3605 18.9963 25.6358 19.0006C25.9111 19.0049 26.1805 19.101 26.4157 19.2788L37.2606 27.3418C37.4866 27.5179 37.673 27.7623 37.8021 28.0522C37.9313 28.3422 37.999 28.6681 37.999 28.9994C37.999 29.3308 37.9313 29.6567 37.8021 29.9467C37.673 30.2366 37.4866 30.481 37.2606 30.6571L26.4139 38.7222C26.1732 38.903 25.8975 38.9991 25.6162 39.0005Z" fill="white"/></svg>');
+    position: absolute;
+    height: 40px;
+    width: 40px;
+
+    @include tablet {
+      height: 50px;
+      width: 50px;
+    }
+
+    right: 9px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}

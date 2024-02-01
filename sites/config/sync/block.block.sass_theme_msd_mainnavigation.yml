@@ -1,0 +1,25 @@
+uuid: 7c88a169-f834-4bc0-9b06-16b9ce77b9a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - sass_theme_msd
+id: sass_theme_msd_mainnavigation
+theme: sass_theme_msd
+region: menubar
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: 8246a290-a9cb-4467-af15-439a102d7c54
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_desgin_images:766a9078-d0e8-4321-bf97-aff9f7eb09ff'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - sass_theme_msd
+id: sass_theme_msd_headerdesignimages
+theme: sass_theme_msd
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:766a9078-d0e8-4321-bf97-aff9f7eb09ff'
+settings:
+  id: 'block_content:766a9078-d0e8-4321-bf97-aff9f7eb09ff'
+  label: 'Header Design Images'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

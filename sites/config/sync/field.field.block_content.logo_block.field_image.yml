@@ -1,0 +1,29 @@
+uuid: 0d5b65de-bedb-47e4-80f4-7b8195ca1cfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_block
+    - field.storage.block_content.field_image
+    - media.type.image
+id: block_content.logo_block.field_image
+field_name: field_image
+entity_type: block_content
+bundle: logo_block
+label: Logo
+description: 'Please provide the logo. SVG is better format.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

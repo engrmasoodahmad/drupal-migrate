@@ -1,0 +1,29 @@
+uuid: 4ac0c0a1-871d-4842-9e31-8056a49e9f8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_desgin_images
+    - field.storage.block_content.field_background_tablet
+    - media.type.image
+id: block_content.header_desgin_images.field_background_tablet
+field_name: field_background_tablet
+entity_type: block_content
+bundle: header_desgin_images
+label: 'Background - Tablet'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

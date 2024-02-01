@@ -1,0 +1,10 @@
+uuid: 314cff72-d94d-412d-9672-ed68a3391c87
+langcode: en
+status: true
+dependencies: {  }
+id: social_icon
+label: 'Social icon'
+icon_uuid: null
+icon_default: null
+description: 'This paragraph type will have list text, and link for the icon.'
+behavior_plugins: {  }

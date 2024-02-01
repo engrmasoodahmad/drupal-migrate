@@ -1,0 +1,42 @@
+uuid: 70b064b0-3da2-46d7-a837-82763bdab105
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_desgin_images
+    - field.field.block_content.header_desgin_images.field_background_desktop
+    - field.field.block_content.header_desgin_images.field_background_mobile
+    - field.field.block_content.header_desgin_images.field_background_tablet
+id: block_content.header_desgin_images.default
+targetEntityType: block_content
+bundle: header_desgin_images
+mode: default
+content:
+  field_background_desktop:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_background_mobile:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_background_tablet:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

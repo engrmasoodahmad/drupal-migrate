@@ -1,0 +1,110 @@
+.hero {
+  @extend .container;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__text {
+    flex: 4.5;
+    padding-inline: 42px;
+
+    @include tablet {
+      padding-inline: 0;
+    }
+
+    @include desktop {
+      margin-top: 74px;
+    }
+
+    &--title {
+      color: $color-primary-2;
+      font-family: $font-nunito;
+      font-size: 30px;
+      font-size: calculate-value(30, 37, $mobile, $tablet);
+      line-height: 110%;
+      font-style: normal;
+      font-weight: 800;
+      margin-top: 0;
+      margin-bottom: 16px;
+      // text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.29);
+
+      @include tablet {
+        padding-right: 32px;
+        font-size: calculate-value(37, 75, $tablet, $desktop-xlg);
+      }
+    }
+
+    &--body {
+      color: $color-secondary-4;
+      font-family: $font-nunito;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 157.4%;
+      font-size: 13px;
+      font-size: calculate-value(13, 16, $mobile, $tablet);
+      margin-bottom: 12px;
+
+      @include tablet {
+        margin-bottom: 16px;
+        font-size: calculate-value(16, 25, $tablet, $desktop);
+        margin-bottom: calculate-value(16, 48, $tablet, $desktop-xlg);
+      }
+    }
+
+    &--ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include tablet {
+        flex-direction: row
+      }
+
+      &--cta1 {
+        @extend .button-primary;
+
+        @include desktop-large {
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.34);
+          -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.34);
+          -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.34);
+        }
+      }
+
+      &--cta2 {
+        @extend .button-video;
+
+        @include desktop-large {
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.34);
+          -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.34);
+          -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.34);
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 5.5;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+      border-radius: 33px;
+      border: 1px solid white;
+      border: calculate-value(11, 13, $mobile, $tablet) solid white;
+      box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+
+      @include tablet {
+        border-radius: 40px;
+        border: calculate-value(13, 28, $tablet, $desktop-xlg) solid white;
+      }
+    }
+  }
+}

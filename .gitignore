@@ -1,0 +1,71 @@
+# Ignore non-custom parts of Drupal.
+/sites/*/files
+/themes/custom/*/node_modules
+/themes/*/node_modules
+
+# Ignore binaries.
+/bin
+
+# Ignore non-custom parts of Drupal.
+/database
+/core
+/libraries
+/modules/contrib
+/themes/custom/sass_theme_msd/libs/fontawesome/*
+/modules/stage_file_proxy
+/profiles/contrib
+/themes/contrib
+!/sites/default/files
+/sites/default/files/*
+web/sites/default/files
+
+web/error_log
+
+# Ignoring the .htaccess file
+.htaccess
+/.htaccess
+/.htaccess
+
+# Ignoring the system performance settings
+/config/default/sync/system.performance.yml
+
+# Ignore Composer-managed dependencies.
+/vendor
+/.travis.yml
+/README.md
+/.csslintrc
+/.editorconfig
+/.eslintignore
+/.eslintrc.json
+/.gitattributes
+/.ht.router.php
+/.htaccess
+/autoload.php
+/index.php
+/robots.txt
+/update.php
+.config
+/sites/development.services.yml
+/sites/local.development.services.yml
+/sites/example.settings.local.php
+/sites/example.sites.php
+/sites/default/default.services.yml
+/sites/default/default.settings.php
+/sites/default/settings.local.php
+/drush/README.md
+.idea/*
+
+#.lando.yml
+/sites/default/services.yml
+/sites/*/*.settings.php
+/sites/sites.local.php
+
+# Ignore optional Vagrant configuration file.
+vagrant-config.yml
+.vagrant
+
+# Ignore editors
+.vscode
+.DS_Store
+/.editorconfig
+/.gitattributes

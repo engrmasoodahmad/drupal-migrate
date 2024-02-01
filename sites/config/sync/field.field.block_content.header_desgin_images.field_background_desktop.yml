@@ -1,0 +1,29 @@
+uuid: 4766029f-108f-4ec4-8940-fe09cb7df15f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_desgin_images
+    - field.storage.block_content.field_background_desktop
+    - media.type.image
+id: block_content.header_desgin_images.field_background_desktop
+field_name: field_background_desktop
+entity_type: block_content
+bundle: header_desgin_images
+label: 'Background - Desktop'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 9197dd26-f277-4e11-b21a-62eaee1a7b17
+langcode: en
+status: true
+dependencies: {  }
+id: header_desgin_images
+label: 'Header Desgin Images'
+revision: 0
+description: 'This block type is solely for header design.'

@@ -1,0 +1,29 @@
+uuid: 120931ec-b680-42ae-b092-2f955fcc9f4a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:30faf1f6-fd33-49ef-892a-a3ab8be19df1'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - sass_theme_msd
+third_party_settings:
+  block_class:
+    classes: copyright
+id: sass_theme_msd_copyrightblock
+theme: sass_theme_msd
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:30faf1f6-fd33-49ef-892a-a3ab8be19df1'
+settings:
+  id: 'block_content:30faf1f6-fd33-49ef-892a-a3ab8be19df1'
+  label: 'Copyright - block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,33 @@
+uuid: 639c61ce-9b44-4c1a-aeef-6fa8f9d08707
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon
+field_name: field_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: Facebook
+    -
+      value: twitter
+      label: Twitter
+    -
+      value: linkedin
+      label: Linkedin
+    -
+      value: instagram
+      label: Instagram
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

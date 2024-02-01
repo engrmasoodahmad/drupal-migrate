@@ -1,0 +1,263 @@
+$menubar-height: 110px;
+$menubar-height-desktop: 195px;
+
+body {
+  overflow-x: hidden;
+}
+
+.menubar {
+  height: $menubar-height;
+
+  @include desktop {
+    height: $menubar-height-desktop;
+  }
+
+  display: flex;
+  align-items: center;
+
+  .menu-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 40px;
+
+    .logo-link-wrapper {
+      img {
+        width: 237px;
+        height: 75px;
+        object-fit: contain;
+      }
+    }
+
+    .menu-main-block {
+      position: absolute;
+      top: $menubar-height;
+      right: 0;
+      width: 0;
+      background-color: white;
+      z-index: 10;
+      height: calc(100vh - $menubar-height);
+      transition: all 0.3s ease-in-out;
+      overflow-x: hidden;
+      -webkit-box-shadow: -16px 27px 57px -8px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -16px 27px 57px -8px rgba(0, 0, 0, 0.75);
+      box-shadow: -16px 27px 57px -8px rgba(0, 0, 0, 0.75);
+
+      @include desktop {
+        top: $menubar-height-desktop;
+        justify-self: end;
+        height: calc(100vh - $menubar-height-desktop);
+      }
+
+      &.menu-opened {
+        width: 360px;
+
+        @include tablet {
+          width: 400px;
+        }
+      }
+
+      @include desktop {
+        display: block;
+        position: unset;
+        background: unset;
+        top: unset;
+        right: unset;
+        width: unset;
+        height: unset;
+        transition: unset;
+        transform: unset;
+        -webkit-box-shadow: unset;
+        -moz-box-shadow: unset;
+        box-shadow: unset;
+      }
+
+      .menu-items {
+        @include desktop {
+          flex-direction: row;
+          align-items: center;
+          gap: 30px;
+          padding: 24px 52px;
+          background: rgba(255, 255, 255, 0.10);
+          border-radius: 39px;
+          height: 75px;
+        }
+
+        overflow-x: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        display: flex;
+        align-items: start;
+
+        &>.menu-item {
+          padding: 30px;
+          border-bottom: 1px solid rgb(164, 164, 164);
+          width: 100%;
+          position: relative;
+
+          @include desktop {
+            width: unset;
+            padding: 0;
+            border-bottom: 0;
+          }
+
+          a {
+            @include desktop {
+              color: $color-secondary-5;
+            }
+
+            font-family: $font-nunito,
+            sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            text-decoration: none;
+            white-space: nowrap;
+
+            &.is-active {
+              color: $color-primary-2;
+
+              @include desktop {
+                color: $color-secondary-5;
+              }
+
+              display: inline-block;
+              text-decoration: underline;
+              font-weight: 900;
+              text-underline-offset: 4px;
+            }
+          }
+
+          // The Anchor tag - that has the subchild (it should have full height)
+          &[child="yes"] {
+            position: relative;
+
+            &::after {
+              content: '';
+              background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none"><path d="M1.07324 1L5.00259 4.92935" stroke="%23C23E3E" stroke-width="2" stroke-linecap="round"/><path d="M9.21973 1L5.29038 4.92935" stroke="%23C23E3E" stroke-width="2" stroke-linecap="round"/></svg>');
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              width: 12px;
+              height: 7px;
+              position: absolute;
+              top: 40px;
+              translate: -50%;
+
+              @include desktop {
+                top: 65px;
+                translate: -50% 0;
+              }
+
+              left: 50%;
+            }
+
+            @include desktop {
+              display: flex;
+              height: calc($menubar-height - 10px);
+              align-items: center;
+            }
+          }
+
+          &:hover>.menu-items {
+            display: block;
+            padding-top: 1rem;
+            padding-left: 2rem;
+
+            @include desktop {
+              padding: 8px 1rem;
+            }
+          }
+
+          .menu-items {
+            display: none;
+
+            @include desktop {
+              position: absolute;
+              box-shadow: 1px 7px 17px -2px rgba(0, 0, 0, 0.75);
+              -webkit-box-shadow: 1px 7px 17px -2px rgba(0, 0, 0, 0.75);
+              -moz-box-shadow: 1px 7px 17px -2px rgba(0, 0, 0, 0.75);
+              padding: 8px 1rem;
+              border-radius: 4px;
+              width: 200px;
+              top: 80px;
+            }
+
+            padding: 0;
+            list-style: none;
+            // background: white;
+
+            &>.menu-item {
+              padding-bottom: 8px;
+              padding-top: 8px;
+
+              &:hover {
+                border-bottom: 1px solid black;
+              }
+
+              &:last-child {
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      justify-self: flex-end;
+      cursor: pointer;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      &.closed-menu {
+        display: block;
+
+        @include desktop {
+          display: none;
+
+        }
+      }
+    }
+
+  }
+}
+
+// BASE FUNCTIONALITY CLASSES
+
+.d-none {
+  display: none !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+
+  @include desktop {
+    overflow: unset;
+  }
+}
+
+.overlay {
+  position: relative;
+
+  &::after {
+    @include desktop {
+      content: unset;
+    }
+
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: $menubar-height;
+    width: 100%;
+    height: calc(100vh - $menubar-height);
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
