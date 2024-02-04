@@ -8,9 +8,7 @@
     p {
       margin-block: 0;
       font-family: $font-nunito;
-      font-size: 7px;
       font-weight: 400;
-      line-height: 11px;
       letter-spacing: 0em;
       text-align: left;
       color: $color-secondary-4;
@@ -32,13 +30,8 @@
     gap: 16px;
 
     .social-icon {
-      width: 14px;
-      height: 14px;
-
-      @include tablet {
-        width: 20px;
-        height: 20px;
-      }
+      width: 20px;
+      height: 20px;
 
       @include desktop {
         width: 24px;

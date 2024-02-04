@@ -5,7 +5,6 @@ dependencies:
   content:
     - 'block_content:header_desgin_images:766a9078-d0e8-4321-bf97-aff9f7eb09ff'
   module:
-    - block_class
     - block_content
   theme:
     - sass_theme_msd

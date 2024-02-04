@@ -1,0 +1,29 @@
+uuid: 68bb8828-4eed-41f7-ab58-a677eaf6271c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e1d9c780-f473-4ad6-b116-dec82775863c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - sass_theme_msd
+third_party_settings:
+  block_class:
+    classes: footer__text
+id: sass_theme_msd_footer__text
+theme: sass_theme_msd
+region: footer_fourth
+weight: -6
+provider: null
+plugin: 'block_content:e1d9c780-f473-4ad6-b116-dec82775863c'
+settings:
+  id: 'block_content:e1d9c780-f473-4ad6-b116-dec82775863c'
+  label: 'Footer text'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
