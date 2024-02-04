@@ -1,0 +1,30 @@
+uuid: 2f6eb182-e48a-4a74-a1b7-a51a4af7bc7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.request_a_quote
+  module:
+    - block_class
+    - webform
+  theme:
+    - sass_theme_msd
+third_party_settings:
+  block_class:
+    classes: footer__request-a-quote
+id: sass_theme_msd_webform
+theme: sass_theme_msd
+region: footer_fourth
+weight: -4
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: request_a_quote
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }
