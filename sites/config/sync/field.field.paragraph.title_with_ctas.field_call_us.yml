@@ -1,0 +1,19 @@
+uuid: 1041da3b-a91a-423b-ba9e-ae9c5afcd420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_call_us
+    - paragraphs.paragraphs_type.title_with_ctas
+id: paragraph.title_with_ctas.field_call_us
+field_name: field_call_us
+entity_type: paragraph
+bundle: title_with_ctas
+label: 'Call us'
+description: 'Please add your phone number.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

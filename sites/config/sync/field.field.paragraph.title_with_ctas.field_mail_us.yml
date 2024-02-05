@@ -1,0 +1,19 @@
+uuid: d060286b-93e6-4d6f-9ab6-56905af83786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mail_us
+    - paragraphs.paragraphs_type.title_with_ctas
+id: paragraph.title_with_ctas.field_mail_us
+field_name: field_mail_us
+entity_type: paragraph
+bundle: title_with_ctas
+label: 'Mail us'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

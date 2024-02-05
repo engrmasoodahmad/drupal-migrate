@@ -1,0 +1,10 @@
+uuid: 16bc516c-1816-4907-9a29-935a99c5674b
+langcode: en
+status: true
+dependencies: {  }
+id: title_with_ctas
+label: 'Title with ctas'
+icon_uuid: null
+icon_default: null
+description: 'The paragraph type mainly consists of a title, and some ctas.'
+behavior_plugins: {  }
