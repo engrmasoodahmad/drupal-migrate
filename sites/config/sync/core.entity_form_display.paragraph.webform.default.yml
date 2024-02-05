@@ -1,0 +1,25 @@
+uuid: 1255ff84-4c2b-42fe-8d09-2b961ffd8f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform.field_webform
+    - paragraphs.paragraphs_type.webform
+  module:
+    - webform
+id: paragraph.webform.default
+targetEntityType: paragraph
+bundle: webform
+mode: default
+content:
+  field_webform:
+    type: webform_entity_reference_select
+    weight: 0
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

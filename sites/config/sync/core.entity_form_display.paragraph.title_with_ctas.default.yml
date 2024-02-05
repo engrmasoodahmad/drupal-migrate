@@ -1,0 +1,43 @@
+uuid: 41bc3a25-c874-411d-8fb2-d7e4814ba373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_with_ctas.field_call_us
+    - field.field.paragraph.title_with_ctas.field_mail_us
+    - field.field.paragraph.title_with_ctas.field_title
+    - paragraphs.paragraphs_type.title_with_ctas
+  module:
+    - text
+id: paragraph.title_with_ctas.default
+targetEntityType: paragraph
+bundle: title_with_ctas
+mode: default
+content:
+  field_call_us:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mail_us:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

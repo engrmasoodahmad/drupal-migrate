@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set title = content.field_title[0] %}
+{% set callUs = content.field_call_us[0] %}
+{% set mailUs = content.field_mail_us[0] %}
+{% set mailIcon %}
+<svg width="83" height="83" viewbox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect width="83" height="83" rx="20" fill="#009FE4"/>
+	<path d="M18 36L40.5 44.6207L63 36V51C63 56.5228 58.5228 61 53 61H28C22.4772 61 18 56.5228 18 51V36Z" fill="#6DCDF6" fill-opacity="0.84"/>
+	<path d="M18 33C18 27.4772 22.4772 23 28 23H53C58.5228 23 63 27.4772 63 33V33.3636L40.5 42L18 33.3636V33Z" fill="white"/>
+</svg>
+{% endset %}
+{% set callIcon %}
+<svg width="83" height="83" viewbox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect width="83" height="83" rx="20" fill="#1EA8E4"/>
+	<path d="M21.0699 31.0158C21.0839 31.0944 21.0952 31.173 21.0999 31.2523C21.1592 32.2695 21.9282 40.3854 31.5962 50.2673C31.5962 50.2673 39.9477 58.7782 48.7374 60.5676C48.7754 60.5755 48.8128 60.584 48.8508 60.5945C49.383 60.7392 53.9075 61.8828 56.2398 59.5439L59.5626 56.2807C59.5926 56.2512 59.6239 56.2224 59.6559 56.1949C59.9874 55.91 62.295 53.778 59.9867 51.5111C57.6504 49.2167 54.7052 46.4192 54.3717 46.1022C54.3557 46.0871 54.3404 46.0721 54.3251 46.0563C54.1443 45.8716 52.4276 44.2106 50.4168 45.7282C50.3587 45.7721 50.304 45.8212 50.252 45.8723L46.9987 49.0758C46.2697 49.7668 45.1119 49.7577 44.3936 49.0555L33.2789 38.1821C32.5326 37.4517 32.552 36.259 33.3216 35.5523L35.9227 33.1655C35.9227 33.1655 38.7726 30.5744 35.712 27.7756L31.1687 23.3138C31.1407 23.2863 31.114 23.2581 31.0874 23.2287C30.7939 22.9038 28.6163 20.6794 26.0613 23.1553C25.9832 23.2306 25.8985 23.2987 25.8085 23.359C24.9415 23.9433 20.3849 27.2077 21.0699 31.0158Z" fill="white"/>
+	<path d="M51.6918 38.9647C52.3955 38.9643 52.9749 38.3908 52.8752 37.6942C52.7522 36.834 52.5049 35.994 52.1392 35.2009C51.5953 34.0209 50.8022 32.9726 49.8146 32.1282C48.827 31.2838 47.6683 30.6633 46.4181 30.3092C45.5778 30.0713 44.7096 29.9575 43.8407 29.9696C43.1371 29.9794 42.6606 30.6408 42.7695 31.336C42.8785 32.0312 43.5338 32.4931 44.2369 32.5227C44.7387 32.5438 45.2378 32.6234 45.7238 32.7611C46.62 33.0149 47.4507 33.4597 48.1586 34.065C48.8666 34.6704 49.4351 35.4218 49.825 36.2677C50.0365 36.7265 50.1928 37.2071 50.2916 37.6996C50.43 38.3895 50.9881 38.9651 51.6918 38.9647Z" fill="#84DAFF"/>
+	<path d="M56.9551 39.1092C57.8027 39.1755 58.553 38.5406 58.5213 37.691C58.4636 36.1458 58.1377 34.6182 57.5541 33.1778C56.7772 31.2605 55.5652 29.55 54.0137 28.1816C52.4623 26.8132 50.6139 25.8242 48.6146 25.2929C47.1125 24.8937 45.5563 24.761 44.0159 24.8968C43.169 24.9715 42.6327 25.7951 42.8044 26.6278C42.9761 27.4604 43.7916 27.984 44.6405 27.9387C45.7092 27.8816 46.7834 27.9919 47.8238 28.2684C49.3618 28.6772 50.7837 29.4379 51.9772 30.4906C53.1706 31.5433 54.103 32.859 54.7006 34.334C55.1048 35.3317 55.3484 36.3837 55.4252 37.4511C55.4863 38.2991 56.1075 39.0429 56.9551 39.1092Z" fill="#84DAFF"/>
+</svg>
+{% endset %}
+{%
+  set classes = [
+    'text-with-ctas',
+    'container',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			<h1 class="text-with-ctas__title">{{ title }}</h1>
+			<div class="text-with-ctas__ctas">
+				<div class="text-with-ctas__ctas--mail-us">
+					<div class="text-with-ctas__ctas--mail-us--icon">{{ mailIcon }}</div>
+					<div class="text-with-ctas__ctas--mail-us--title">{{ "Mail Us"|t }}</div>
+					<div class="text-with-ctas__ctas--mail-us--value">{{ mailUs }}</div>
+				</div>
+				<div class="text-with-ctas__ctas--call-us">
+					<div class="text-with-ctas__ctas--call-us--icon">{{ callIcon }}</div>
+					<div class="text-with-ctas__ctas--call-us--title">{{ "Call Us"|t }}</div>
+					<div class="text-with-ctas__ctas--mail-us--value">{{ callUs }}</div>
+				</div>
+			</div>
+		{% endblock %}
+	</div>
+{% endblock paragraph %}

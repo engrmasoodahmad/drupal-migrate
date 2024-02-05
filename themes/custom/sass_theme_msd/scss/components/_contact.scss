@@ -1,0 +1,210 @@
+.text-with-ctas {
+  padding-block: 70px;
+
+  &__title {
+    @extend .main-title;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 67px;
+  }
+
+  &__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    &--mail-us,
+    &--call-us {
+      width: 100%;
+      background-color: white;
+      height: 80px;
+      border-radius: 20px;
+      padding: 14px;
+
+      @include tablet {
+        height: 110px;
+        border-radius: 30px;
+        padding: 24px;
+
+      }
+
+      @include desktop {
+        height: 150px;
+        border-radius: 40px;
+        padding: 34px;
+
+      }
+
+      box-shadow: 0px 24px 33px 0px rgba(181, 181, 181, 0.25);
+      border: 1px solid #e8e8e8;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &--icon {
+        svg {
+          width: 36px;
+          height: 36px;
+
+          @include tablet {
+            width: 50px;
+            height: 50px;
+          }
+
+          @include desktop {
+            height: 80px;
+            width: 80px;
+          }
+        }
+      }
+
+      &--title {
+        font-size: 16px;
+        line-height: 17px;
+
+        @include tablet {
+          font-size: 18px;
+          line-height: 18px;
+        }
+
+        @include desktop {
+          font-size: 22px;
+          line-height: 25px;
+        }
+
+        font-weight: 700;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1B2534;
+      }
+
+      &--value {
+        margin-left: auto;
+        color: #797979;
+        font-size: 16px;
+        line-height: 17px;
+
+        @include tablet {
+          font-size: 18px;
+          line-height: 18px;
+        }
+
+        @include desktop {
+          font-size: 22px;
+          line-height: 25px;
+        }
+
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: right;
+      }
+    }
+
+  }
+}
+
+.contact-us {
+  background-color: white;
+  // filter: drop-shadow(0px 17px 44px rgba(179, 179, 179, 0.25));
+  // box-shadow: 0px 17px 44px 0px #B3B3B340;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding-block: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-inline: 25px;
+  margin-inline: 16px;
+
+  @include tablet {
+    margin-inline: auto;
+    border-radius: 30px;
+    padding-block: 60px;
+    padding-inline: 75px;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  @include desktop {
+    padding-inline: 90px;
+    gap: 52px;
+    border-radius: 40px;
+    padding-block: 90px;
+  }
+
+  label {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 8px;
+
+    @include desktop {
+      margin-bottom: 16px;
+    }
+
+    color: #242331;
+    display: block;
+
+    &.form-required::after {
+      content: '*';
+      color: red;
+      margin-left: 4px;
+    }
+  }
+
+  input:not(.form-submit),
+  textarea {
+    height: 60px;
+    padding: 20px;
+    border: 1px solid #D3D3D3;
+    border-radius: 10px;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      font-family: $font-nunito;
+      text-align: left;
+      color: #797979;
+    }
+
+    @include desktop {
+      border-radius: 20px;
+    }
+
+  }
+
+  textarea {
+    height: unset;
+  }
+
+  &__message {
+    @include tablet {
+      grid-column: span 2;
+    }
+  }
+
+  &__submit {
+    @include tablet {
+      grid-column: span 2;
+      justify-self: center;
+    }
+
+    input {
+      @extend .button-secondary;
+      width: fit-content;
+      border: 0;
+      display: flex;
+      align-items: center;
+      padding-block: 0;
+    }
+  }
+}
