@@ -1,0 +1,19 @@
+uuid: 63254798-c6f5-4a41-8e3d-ec527843cdd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_designation
+    - paragraphs.paragraphs_type.testimonial_content
+id: paragraph.testimonial_content.field_designation
+field_name: field_designation
+entity_type: paragraph
+bundle: testimonial_content
+label: Designation
+description: 'Please provide the designation of the person.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

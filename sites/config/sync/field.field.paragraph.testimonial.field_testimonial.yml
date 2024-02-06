@@ -1,20 +1,20 @@
-uuid: a458526d-1ec3-4f1e-abe4-5842757c2bc2
+uuid: 79252bc6-5247-4d42-b7b3-5c6d71f359c8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content
-    - node.type.page
+    - field.storage.paragraph.field_testimonial
+    - paragraphs.paragraphs_type.testimonial
     - paragraphs.paragraphs_type.testimonial_content
   module:
     - entity_reference_revisions
-id: node.page.field_content
-field_name: field_content
-entity_type: node
-bundle: page
-label: Content
+id: paragraph.testimonial.field_testimonial
+field_name: field_testimonial
+entity_type: paragraph
+bundle: testimonial
+label: Testimonial
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -23,21 +23,24 @@ settings:
   handler_settings:
     target_bundles:
       testimonial_content: testimonial_content
-    negate: 1
+    negate: 0
     target_bundles_drag_drop:
       hero:
-        weight: 2
-        enabled: false
-      social_icon:
         weight: 7
         enabled: false
-      testimonial_content:
+      social_icon:
         weight: 8
-        enabled: true
-      title_with_ctas:
+        enabled: false
+      testimonial:
         weight: 9
         enabled: false
-      webform:
+      testimonial_content:
         weight: 10
+        enabled: true
+      title_with_ctas:
+        weight: 11
+        enabled: false
+      webform:
+        weight: 12
         enabled: false
 field_type: entity_reference_revisions

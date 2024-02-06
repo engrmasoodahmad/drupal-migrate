@@ -1,0 +1,10 @@
+uuid: ae087b1d-66a8-451f-853e-a0132d6136d0
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial_content
+label: 'Testimonial content'
+icon_uuid: null
+icon_default: null
+description: 'This paragraph type will have the testimonial content.'
+behavior_plugins: {  }

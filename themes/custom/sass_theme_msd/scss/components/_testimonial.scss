@@ -1,0 +1,113 @@
+.testimonials {
+  margin-block: 50px;
+  padding-block: 100px;
+  background-color: $color-primary-1;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &::before {
+    top: -500px;
+    left: -500px;
+  }
+
+  &::after {
+    bottom: -500px;
+    right: -500px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-primary-1;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 25px 34px 25px 34px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 55px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+  }
+
+  &__quotes {
+    text-align: center;
+    margin-block: 40px;
+  }
+
+  &__content {
+    @extend .container;
+
+    &--single-testimonial {
+
+      &--body {
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 39px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      &--image {
+        text-align: center;
+        margin-bottom: 16px;
+
+        img {
+          width: 110px;
+          height: 110px;
+          object-fit: cover;
+          display: block;
+          border-radius: 50%;
+          margin-inline: auto;
+        }
+      }
+
+      &--name {
+        color: white;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 55px;
+        letter-spacing: 0em;
+        text-align: center;
+
+      }
+
+      &--designation {
+        color: white;
+        font-family: Nunito;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 31px;
+        letter-spacing: 0em;
+        text-align: center;
+
+      }
+    }
+  }
+}
