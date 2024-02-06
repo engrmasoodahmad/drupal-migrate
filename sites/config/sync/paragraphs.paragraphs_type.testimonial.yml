@@ -1,0 +1,10 @@
+uuid: 6b5b1b86-0eae-4572-ae37-9c2887143242
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial
+label: Testimonial
+icon_uuid: null
+icon_default: null
+description: 'This paragraph type is for testimonials.'
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+uuid: 331f4d36-66a4-457c-b667-f2df5024b831
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.testimonial
+  module:
+    - text
+id: paragraph.testimonial.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: testimonial
+label: Title
+description: 'Please provide the title of the whole block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text
